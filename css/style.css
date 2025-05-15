@@ -1,12 +1,12 @@
 /* fonts */
 @font-face {
     font-family: "MMRText";
-    src: url("mmrtext.ttf") format("truetype");
+    src: url("fonts/mmrtext.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "NexaHeavy";
-    src: url("Nexa-Heavy.ttf") format("truetype");
+    src: url("fonts/Nexa-Heavy.ttf") format("truetype");
 }
 
 body {
@@ -389,3 +389,27 @@ h1 {
 .linkerkant img {
     width: 200px;
 }
+
+.reclame {
+    margin-left: 160px;
+    display: flex;
+    width: 100%;
+}
+.linkerkant {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+.linkerkant h3 {
+    color: black;
+    font-size: 30px;
+    margin: 0;
+    font-weight: bold;
+}
+.linkerkant img {
+    margin-top: 50px;
+    height: 50px;
+    width: auto;
+}
+.rechterkant
+

@@ -129,7 +129,11 @@
         <section class="reclame">
             <div class="linkerkant">
                 <h3>TL reizen app</h3>
-                <img src="images/download.png" alt="download">
+                <img src="images/appstoreplaystore.png" alt="appstore">
+            </div>
+            <div class="rechterkant">
+                <h3>Blijf op de hoogte</h3>
+                <p>volg ons op social media</p>
             </div>
         </section>
 
