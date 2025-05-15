@@ -87,6 +87,7 @@ nav a:hover::after {
     border-radius: 5px;
     padding: 9px 20px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .account:hover {
