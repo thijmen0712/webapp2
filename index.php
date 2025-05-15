@@ -46,7 +46,6 @@
         </section>
 
         <section class="bestemmingen">
-            testje
             <h1>Populaire bestemmingen</h1>
             <div class="bestemmingen-flex">
                 <?php
