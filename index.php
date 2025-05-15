@@ -46,6 +46,7 @@
         </section>
 
         <section class="bestemmingen">
+            testje
             <h1>Populaire bestemmingen</h1>
             <div class="bestemmingen-flex">
                 <?php
@@ -132,6 +133,7 @@
                 <img src="images/download.png" alt="download">
             </div>
         </section>
+
     </main>
 </body>
 
