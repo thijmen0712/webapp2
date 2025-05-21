@@ -444,3 +444,239 @@ footer {
     justify-content: space-evenly;
     margin-bottom: 40px;
 }
+
+
+
+
+
+
+
+.login-center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Card container */
+.login-container {
+    margin-top: 100px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 360px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Labels */
+.login-form label {
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* Inputs */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Password row with label + forgot link */
+.password-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.password-row label {
+    margin: 0;
+}
+
+.password-row a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #2E8BC0;
+}
+
+.password-row a:hover {
+    text-decoration: underline;
+}
+
+/* Login button */
+.login-form button {
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #2E8BC0;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #2372a4;
+}
+
+/* Sign up text */
+.signup-text {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.signup-text a {
+    color: #2E8BC0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+.spoed-contact {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.spoed-contact h2 {
+    font-size: 28px;
+    color: #0600bc;
+    margin-bottom: 10px;
+}
+
+.spoed-contact p {
+    font-size: 16px;
+    margin: 6px 0;
+}
+
+.bold-label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.spoed-contact select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 250px;
+    margin-bottom: 30px;
+}
+
+.spoed-kaart {
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-size: 16px;
+}
+
+.spoed-kaart h3 {
+    color: #0700d4;
+    font-size: 22px;
+    margin: 0 0 10px 0;
+}
+
+.telefoon-link {
+    font-size: 20px;
+    color: #1a1a1a;
+    text-decoration: underline;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.tarief {
+    font-size: 14px;
+    color: #777;
+    margin: 0 0 10px 0;
+}
+
+.talenbox {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    max-width: 350px;
+}
+
+.talenbox p {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.taalrij {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.taalrij:last-child {
+    border-bottom: none;
+}
+
+.voordelen-lijst {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.ga-verder {
+    padding: 12px;
+    flex: 1;
+    font-size: 16px;
+    background-color: #FF2C83;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.annuleer {
+    padding: 12px;
+    flex: 1;
+    font-size: 16px;
+    background-color: white;
+    color: #2E008B;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    line-height: 20px;
+}
