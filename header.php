@@ -11,6 +11,6 @@
     </nav>
 
     <div class="knoppen">
-        <button class="account"><b>mijn account</b></button>
+        <a href="account.php" class="account"><b>mijn account</b></a>
     </div>
 </header>
