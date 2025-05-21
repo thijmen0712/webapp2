@@ -134,9 +134,21 @@
             <div class="rechterkant">
                 <h3>Blijf op de hoogte</h3>
                 <p>volg ons op social media</p>
+                <div class="socials">
+                    <div class="social"><img src="images/x.png" alt="X"></div>
+                    <div class="social"><img src="images/facebook.png" alt="Facebook"></div>
+                    <div class="social"><img src="images/instagram.png" alt="Instagram"></div>
+                    <div class="social"><img src="images/whatsapp.png" alt="WhatsApp"></div>
+                    <div class="social"><img src="images/youtube.png" alt="YouTube"></div>
+                    <div class="social"><img src="images/linkedin.png" alt="LinkedIn"></div>
+                </div>
             </div>
         </section>
+        <div class="line"></div>
 
+        <?php
+        include ("footer.php");
+        ?>
     </main>
 </body>
 
