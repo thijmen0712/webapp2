@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn account</title>
+    <title>Wachtwoord vergeten</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,24 +13,19 @@ include 'header.php';
 <div class="login-center-wrapper">
     <div class="login-container">
         <h2>Log in of maak een account aan</h2>
-
-        <form class="login-form" method="post" action="verwerk_login.php">
+        <form class="login-form">
             <label for="email">E-mailadres</label>
             <input type="email" id="email" name="email" placeholder="E-mailadres" required />
 
-            <div class="password-row">
-                <label for="password">Wachtwoord</label>
-                <a href="wachtwoord.php">Wachtwoord vergeten?</a>
-            </div>
-            <input type="password" id="password" name="password" placeholder="Wachtwoord" required />
+            <button type="button" class="verificatiecode">Stuur verificatiecode</button>
 
-            <button type="submit">Log in</button>
-
-            <div class="signup-text">
-                Heb je nog geen account? <a href="accountmaken.php">Meld je nu aan</a>
+            <div class="form-buttons">
+                <button type="submit" class="ga-verder">Ga verder</button>
+                <a href="account.php" class="annuleer">Annuleren</a>
             </div>
         </form>
     </div>
 </div>
+
 </body>
 </html>
