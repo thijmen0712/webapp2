@@ -41,6 +41,11 @@ include 'header.php';
     </div>
 </section>
 
+<footer>
+    <?php
+    include ("footer.php");
+    ?>
+</footer>
 
 </body>
 </html>
