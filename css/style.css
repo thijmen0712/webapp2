@@ -187,7 +187,7 @@ nav a:hover::after {
 
 .linkerveld input:last-child {
     border-radius: 0 10px 10px 0;
-}
+} 
 
 .rechterveld input:first-child {
     border-radius: 10px 0 0 10px;
@@ -196,6 +196,12 @@ nav a:hover::after {
 .rechterveld input:last-child {
     border-radius: 0 10px 10px 0;
 }
+
+/* standaard afgerond links en rechts */
+.rechterveld input.volledig {
+    border-radius: 10px !important;
+}
+
 
 .zoekknop {
     display: flex;
@@ -449,7 +455,7 @@ h2 {
     max-width: 40px;
     max-height: 40px;
     background-color: #2E8BC0;
-    border-radius: 40%;
+    border-radius: 50%;
     padding: 10px;
 }
 
