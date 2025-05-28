@@ -6,40 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TL reizen</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        function toggleRetour() {
+            const retourInput = document.querySelector('input[name="retour"]');
+            const retourRadio = document.querySelector('input[value="retour"]');
+            retourInput.style.display = retourRadio.checked ? 'inline-block' : 'none';
+            if (!retourRadio.checked) retourInput.value = '';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const radios = document.querySelectorAll('input[name="reis"]');
+            radios.forEach(radio => {
+                radio.addEventListener('change', toggleRetour);
+            });
+            toggleRetour();
+        });
+    </script>
+    <script>
+    function toggleRetour() {
+      const retourInput = document.querySelector('input[name="retour"]');
+      const vertrekInput = document.querySelector('input[name="vertrek"]');
+      const retourRadio = document.querySelector('input[value="retour"]');
+
+      if (retourRadio.checked) {
+        retourInput.style.display = 'inline-block';
+        vertrekInput.classList.remove('volledig');
+      } else {
+        retourInput.style.display = 'none';
+        retourInput.value = '';
+        vertrekInput.classList.add('volledig');
+      }
+    }
+    </script>
+    </script>
 </head>
 
 <body>
     <?php
     include 'header.php';
+    include 'connect.php';
     ?>
     <main>
         <section class="zoeken">
             <div class="zoekbalk-container">
                 <div class="zoekbalk">
-                    <form class="zoekformulier">
+                    <form class="zoekformulier" action="zoeken.php" method="GET">
                         <div class="reisopties">
                             <label><input type="radio" name="reis" value="retour"> Retour</label>
                             <label><input type="radio" name="reis" value="enkele"> Enkele reis</label>
                         </div>
                         <div class="velden">
                             <div class="linkerveld">
-                                <input type="text" class="input-field" placeholder="Vanaf">
-                                <input type="text" placeholder="Naar">
+                                <input type="text" class="input-field" name="van" placeholder="Vanaf">
+                                <input type="text" name="naar" placeholder="Naar">
                             </div>
                             <div class="middenveld">
-                                <select>
+                                <select name="personen">
                                     <option>1 Volwassene</option>
                                 </select>
                             </div>
                             <div class="rechterveld">
-                                <input type="date" placeholder="Vertrek op">
-                                <input type="date" placeholder="Retour op">
+                                <input type="date" name="vertrek">
+                                <input type="date" name="retour" class="retour-datum" style="display:none;">
                             </div>
                         </div>
                         <div class="zoekknop">
                             <button type="submit">Zoeken</button>
                         </div>
                     </form>
+
                 </div>
             </div>
             <img src="images/banner.jpg" alt="banner">
@@ -49,41 +84,39 @@
             <h1>Populaire bestemmingen</h1>
             <div class="bestemmingen-flex">
                 <?php
-                for ($i = 1; $i <= 4; $i++) { ?>
-                    <div class="bestemmingen-container">
-                        <div class="bestemming">
-                            <div class="banner">
-                                <img src="images/bestemming.png" alt="bestemming1">
+                $sql = "SELECT locatie, titel, luchthaven, prijs, afbeelding FROM reizen LIMIT 8";
+                $result = $conn->query($sql);
+
+                $count = 0;
+                if ($result && $result->rowCount() > 0) {
+                    echo '<div class="bestemmingen-flex">';
+                    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                        if ($count > 0 && $count % 4 == 0) {
+                            echo '</div><div class="bestemmingen-flex">';
+                        }
+                ?>
+                        <div class="bestemmingen-container">
+                            <div class="bestemming">
+                                <div class="banner">
+                                    <img src="images/<?php echo htmlspecialchars($row['afbeelding']); ?>" alt="<?php echo htmlspecialchars($row['locatie']); ?>">
+                                </div>
+                                <h2><?php echo htmlspecialchars($row['locatie']); ?></h2>
+                                <b><?php echo htmlspecialchars($row['titel']); ?></b>
+                                <div class="bestemming-info">
+                                    <img src="images/luchthaven.png" alt="luchthaven">
+                                    <p><?php echo htmlspecialchars($row['luchthaven']); ?></p>
+                                </div>
+                                <p class="prijs">Vanaf <span>€<?php echo htmlspecialchars($row['prijs']); ?></span></p>
                             </div>
-                            <h2>Locatie</h2>
-                            <b>titel</b>
-                            <div class="bestemming-info">
-                                <img src="images/luchthaven.png" alt="luchthaven">
-                                <p>luchthaven</p>
-                            </div>
-                            <p class="prijs">Vanaf <span>€49</span></p>
                         </div>
-                    </div>
-                <?php } ?>
-            </div>
-            <div class="bestemmingen-flex">
                 <?php
-                for ($i = 1; $i <= 4; $i++) { ?>
-                    <div class="bestemmingen-container">
-                        <div class="bestemming">
-                            <div class="banner">
-                                <img src="images/bestemming.png" alt="bestemming1">
-                            </div>
-                            <h2>Locatie</h2>
-                            <b>titel</b>
-                            <div class="bestemming-info">
-                                <img src="images/luchthaven.png" alt="luchthaven">
-                                <p>luchthaven</p>
-                            </div>
-                            <p class="prijs">Vanaf <span>€49</span></p>
-                        </div>
-                    </div>
-                <?php } ?>
+                        $count++;
+                    }
+                    echo '</div>';
+                } else {
+                    echo "<p>Geen reizen gevonden.</p>";
+                }
+                ?>
             </div>
 
             <div class="disclamer">
@@ -144,10 +177,9 @@
                 </div>
             </div>
         </section>
-        <div class="line"></div>
 
         <?php
-        include ("footer.php");
+        include("footer.php");
         ?>
     </main>
 </body>
