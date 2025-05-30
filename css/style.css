@@ -474,8 +474,7 @@ footer a {
     margin: 20px;
 }
 
-
-.terug-knop {
+overons .terug-knop {
     background-color: #2E8BC0;
     color: white;
     border: none;
@@ -490,4 +489,115 @@ footer a {
     background-color: white;
     color: #2E8BC0;
     border: 1px solid #2E8BC0;
+
+
+
+
+
+.verblijf-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
 }
+
+.verblijf-links {
+    flex: 3;
+    min-width: 300px;
+}
+
+.verblijf-rechts {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.verblijf-titel {
+    font-size: 28px;
+    color: #2E8BC0;
+    margin-bottom: 10px;
+}
+
+.verblijf-adres {
+    font-family: "MMRText", sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.verblijf-adres .blauw {
+    color: #0071c2;
+    cursor: pointer;
+}
+
+.hoofdfoto {
+    background-color: #ccc;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.fotoblok {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.fotoblok .foto {
+    flex: 1 1 calc(33.33% - 10px);
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "MMRText", sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.reserveerknop {
+    background-color: #0071c2;
+    color: white;
+    font-size: 16px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-family: "MMRText", sans-serif;
+}
+
+.recensieblok {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "MMRText", sans-serif;
+    color: #333;
+}
+
+.score-blauw {
+    background-color: #003580;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.map-vlak {
+    background-color: #ccc;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: "MMRText", sans-serif;
+    color: #444;
+  }
