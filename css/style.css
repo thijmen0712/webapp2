@@ -9,7 +9,8 @@
     src: url("fonts/Nexa-Heavy.ttf") format("truetype");
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -167,7 +168,7 @@ nav a:hover::after {
 
 .linkerveld input,
 .rechterveld input,
-.middenveld select {
+.middenveld input[type="number"] {
     width: 100%;
     max-width: 100%;
 }
@@ -180,28 +181,6 @@ nav a:hover::after {
     border: 1px solid #ccc;
     font-family: "MMRText", sans-serif;
 }
-
-.linkerveld input:first-child {
-    border-radius: 10px 0 0 10px;
-}
-
-.linkerveld input:last-child {
-    border-radius: 0 10px 10px 0;
-} 
-
-.rechterveld input:first-child {
-    border-radius: 10px 0 0 10px;
-}
-
-.rechterveld input:last-child {
-    border-radius: 0 10px 10px 0;
-}
-
-/* standaard afgerond links en rechts */
-.rechterveld input.volledig {
-    border-radius: 10px !important;
-}
-
 
 .zoekknop {
     display: flex;
@@ -243,8 +222,7 @@ nav a:hover::after {
 h1 {
     color: #2E8BC0;
     font-size: 30px;
-    text-align: start;
-    margin-left: 160px;
+    text-align: center;
 }
 
 h2 {
@@ -285,6 +263,7 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
 .banner img {
     width: 100%;
     height: 100%;
@@ -334,15 +313,18 @@ h2 {
     color: #2E8BC0;
     font-size: 20px;
 }
+
 .disclamer {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
+
 .disclamer p {
     font-family: "nexa", sans-serif;
     max-width: 900px;
 }
+
 .i {
     width: 40px;
     height: 40px;
@@ -358,6 +340,7 @@ h2 {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     margin-top: 17px;
 }
+
 .bereid {
     display: flex;
     justify-content: center;
@@ -365,6 +348,7 @@ h2 {
     gap: 65px;
     margin-top: 40px;
 }
+
 .bereid-container {
     display: flex;
     flex-direction: column;
@@ -378,6 +362,7 @@ h2 {
     padding: 20px;
     box-sizing: border-box;
 }
+
 .foto {
     width: 100px;
     height: 100px;
@@ -387,26 +372,31 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
 .foto img {
     width: 70px;
     height: 70px;
 
 }
+
 .bereid-container b {
     font-size: 20px;
     color: black;
     margin: 0;
 }
+
 .bereid-container p {
     font-size: 14px;
     color: #444444;
 }
+
 .line {
     width: 1200px;
     height: 1px;
     background-color: #C4C4C4;
     margin: 40px auto;
 }
+
 .linkerkant img {
     width: 200px;
 }
@@ -477,8 +467,27 @@ footer {
     color: white;
     border-top: 1px solid #C4C4C4;
 }
+
 footer a {
     color: black;
     text-decoration: none;
     margin: 20px;
+}
+
+
+.terug-knop {
+    background-color: #2E8BC0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 9px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10%;
+}
+
+.terug-knop:hover {
+    background-color: white;
+    color: #2E8BC0;
+    border: 1px solid #2E8BC0;
 }

@@ -22,23 +22,9 @@
             toggleRetour();
         });
     </script>
-    <script>
-    function toggleRetour() {
-      const retourInput = document.querySelector('input[name="retour"]');
-      const vertrekInput = document.querySelector('input[name="vertrek"]');
-      const retourRadio = document.querySelector('input[value="retour"]');
 
-      if (retourRadio.checked) {
-        retourInput.style.display = 'inline-block';
-        vertrekInput.classList.remove('volledig');
-      } else {
-        retourInput.style.display = 'none';
-        retourInput.value = '';
-        vertrekInput.classList.add('volledig');
-      }
-    }
-    </script>
-    </script>
+
+
 </head>
 
 <body>
@@ -52,18 +38,18 @@
                 <div class="zoekbalk">
                     <form class="zoekformulier" action="zoeken.php" method="GET">
                         <div class="reisopties">
-                            <label><input type="radio" name="reis" value="retour"> Retour</label>
+                            <label><input type="radio" name="reis" value="retour" checked> Retour</label>
                             <label><input type="radio" name="reis" value="enkele"> Enkele reis</label>
                         </div>
                         <div class="velden">
                             <div class="linkerveld">
-                                <input type="text" class="input-field" name="van" placeholder="Vanaf">
-                                <input type="text" name="naar" placeholder="Naar">
+                                <input type="text" name="van" id="van" placeholder="Vanaf" autocomplete="off">
+                                <input type="text" name="naar" id="naar" placeholder="Naar" autocomplete="off">
+
+
                             </div>
                             <div class="middenveld">
-                                <select name="personen">
-                                    <option>1 Volwassene</option>
-                                </select>
+                                <input type="number" name="personen" min="1" max="10" placeholder="Aantal personen" required>
                             </div>
                             <div class="rechterveld">
                                 <input type="date" name="vertrek">
@@ -78,6 +64,8 @@
                 </div>
             </div>
             <img src="images/banner.jpg" alt="banner">
+
+
         </section>
 
         <section class="bestemmingen">
