@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e67b5b8-be82-44b4-b9f4-f1ad58193f73" name="Changes" comment="overons pagina gemaakt">
-      <change beforePath="$PROJECT_DIR$/connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/connect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="4e67b5b8-be82-44b4-b9f4-f1ad58193f73" name="Changes" comment="overons pagina gemaakt" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +63,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#7 on overons",
+    "git-widget-placeholder": "overons",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/thijm/OneDrive - ROC Nijmegen/Bureaublad/webapp2/html",
     "node.js.detected.package.eslint": "true",
@@ -110,6 +107,7 @@
       <workItem from="1747902408635" duration="3921000" />
       <workItem from="1748262689663" duration="2394000" />
       <workItem from="1748335700741" duration="1296000" />
+      <workItem from="1748426956185" duration="597000" />
     </task>
     <task id="LOCAL-00001" summary="een snelle test">
       <option name="closed" value="true" />
