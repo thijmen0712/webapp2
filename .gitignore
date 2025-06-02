@@ -1,0 +1,19 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Build output
+/out/
+build/
+target/
+
+# OS-specifieke bestanden
+.DS_Store
+Thumbs.db
+
+# Logbestanden
+*.log
+
+# Dependency caches
+.gradle/
