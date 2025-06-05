@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,4 +65,28 @@
     
 </body>
 
+=======
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestemmingen</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<?php
+include 'header.php';
+?>
+
+
+
+<footer>
+    <?php
+    include ("footer.php");
+    ?>
+</footer>
+
+</body>
+>>>>>>> 3b6bef096e3e0ce0d055f0722bef188c816b950d
 </html>
