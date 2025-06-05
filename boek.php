@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,7 +65,6 @@
     
 </body>
 
-=======
 <!doctype html>
 <html lang="en">
 <head>
@@ -88,5 +87,3 @@ include 'header.php';
 </footer>
 
 </body>
->>>>>>> 3b6bef096e3e0ce0d055f0722bef188c816b950d
-</html>
