@@ -9,7 +9,8 @@
     src: url("fonts/Nexa-Heavy.ttf") format("truetype");
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -167,7 +168,7 @@ nav a:hover::after {
 
 .linkerveld input,
 .rechterveld input,
-.middenveld select {
+.middenveld input[type="number"] {
     width: 100%;
     max-width: 100%;
 }
@@ -179,22 +180,6 @@ nav a:hover::after {
     border-radius: 10px;
     border: 1px solid #ccc;
     font-family: "MMRText", sans-serif;
-}
-
-.linkerveld input:first-child {
-    border-radius: 10px 0 0 10px;
-}
-
-.linkerveld input:last-child {
-    border-radius: 0 10px 10px 0;
-}
-
-.rechterveld input:first-child {
-    border-radius: 10px 0 0 10px;
-}
-
-.rechterveld input:last-child {
-    border-radius: 0 10px 10px 0;
 }
 
 .zoekknop {
@@ -237,8 +222,7 @@ nav a:hover::after {
 h1 {
     color: #2E8BC0;
     font-size: 30px;
-    text-align: start;
-    margin-left: 160px;
+    text-align: center;
 }
 
 h2 {
@@ -246,6 +230,8 @@ h2 {
     font-size: 30px;
     text-align: start;
 }
+
+
 
 .bestemmingen-flex {
     display: flex;
@@ -270,6 +256,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-decoration: none;
 }
 
 .banner {
@@ -279,6 +266,7 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
 .banner img {
     width: 100%;
     height: 100%;
@@ -294,7 +282,13 @@ h2 {
 
 .bestemming b {
     margin: 5px 0 0 10px;
+    color: black;
     font-size: 14px;
+}
+.bestemming p {
+    font-size: 14px;
+    color: #444444;
+    margin: 5px 10px 0 10px;
 }
 
 .bestemming-info {
@@ -328,15 +322,18 @@ h2 {
     color: #2E8BC0;
     font-size: 20px;
 }
+
 .disclamer {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
+
 .disclamer p {
     font-family: "nexa", sans-serif;
     max-width: 900px;
 }
+
 .i {
     width: 40px;
     height: 40px;
@@ -352,6 +349,7 @@ h2 {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     margin-top: 17px;
 }
+
 .bereid {
     display: flex;
     justify-content: center;
@@ -359,6 +357,7 @@ h2 {
     gap: 65px;
     margin-top: 40px;
 }
+
 .bereid-container {
     display: flex;
     flex-direction: column;
@@ -371,7 +370,9 @@ h2 {
     background-color: #F5F5F5;
     padding: 20px;
     box-sizing: border-box;
+    text-decoration: none;
 }
+
 .foto {
     width: 100px;
     height: 100px;
@@ -381,26 +382,31 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
 .foto img {
     width: 70px;
     height: 70px;
 
 }
+
 .bereid-container b {
     font-size: 20px;
     color: black;
     margin: 0;
 }
+
 .bereid-container p {
     font-size: 14px;
     color: #444444;
 }
+
 .line {
     width: 1200px;
     height: 1px;
     background-color: #C4C4C4;
     margin: 40px auto;
 }
+
 .linkerkant img {
     width: 200px;
 }
@@ -449,7 +455,7 @@ h2 {
     max-width: 40px;
     max-height: 40px;
     background-color: #2E8BC0;
-    border-radius: 40%;
+    border-radius: 50%;
     padding: 10px;
 }
 
@@ -471,8 +477,238 @@ footer {
     color: white;
     border-top: 1px solid #C4C4C4;
 }
+
 footer a {
     color: black;
     text-decoration: none;
     margin: 20px;
 }
+
+overons .terug-knop {
+    background-color: #2E8BC0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 9px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10%;
+}
+
+.terug-knop:hover {
+    background-color: white;
+    color: #2E8BC0;
+    border: 1px solid #2E8BC0;
+}
+
+
+
+
+.verblijf-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+
+
+.pagina-container {
+    max-width: 1200px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: #0077c8;
+    margin-bottom: 20px;
+}
+
+.foto-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    gap: 10px;
+}
+
+.foto-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.info-blokken {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.kenmerken {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.beschrijving {
+    flex: 2;
+    max-width: 700px;
+}
+
+.prijs-boek {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.prijs-boek p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.boek-knop {
+    background-color: #0077c8;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.boek-knop:hover {
+    background-color: #005fa3;
+}
+
+.recensies {
+    background-color: #e4e4e4;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 250px;
+}
+.profiel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C4C4C4;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+.recensie-naam {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.verblijf-links {
+    flex: 3;
+    min-width: 300px;
+}
+
+.verblijf-rechts {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.verblijf-titel {
+    font-size: 28px;
+    color: #2E8BC0;
+    margin-bottom: 10px;
+}
+
+.verblijf-adres {
+    font-family: "MMRText", sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.verblijf-adres .blauw {
+    color: #0071c2;
+    cursor: pointer;
+}
+
+.hoofdfoto {
+    background-color: #ccc;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.fotoblok {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.fotoblok .foto {
+    flex: 1 1 calc(33.33% - 10px);
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "MMRText", sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.reserveerknop {
+    background-color: #0071c2;
+    color: white;
+    font-size: 16px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-family: "MMRText", sans-serif;
+}
+
+.recensieblok {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "MMRText", sans-serif;
+    color: #333;
+}
+
+.score-blauw {
+    background-color: #003580;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.map-vlak {
+    background-color: #ccc;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: "MMRText", sans-serif;
+    color: #444;
+  }

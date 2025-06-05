@@ -10,27 +10,35 @@
 <?php
 include 'header.php';
 ?>
+
+
 <div class="login-center-wrapper">
-    <div class="login-container">
-        <h2>Log in of maak een account aan</h2>
+  <div class="login-container">
+    <h2>Log in of maak een account aan</h2>
 
-        <form class="login-form" method="post" action="verwerk_login.php">
-            <label for="email">E-mailadres</label>
-            <input type="email" id="email" name="email" placeholder="E-mailadres" required />
+    <form class="login-form" method="post" action="verwerk_login.php">
+      <label for="email">E-mailadres</label>
+      <input type="email" id="email" name="email" placeholder="E-mailadres" required />
 
-            <div class="password-row">
-                <label for="password">Wachtwoord</label>
-                <a href="wachtwoord.php">Wachtwoord vergeten?</a>
-            </div>
-            <input type="password" id="password" name="password" placeholder="Wachtwoord" required />
-
-            <button type="submit">Log in</button>
-
-            <div class="signup-text">
-                Heb je nog geen account? <a href="accountmaken.php">Meld je nu aan</a>
-            </div>
-        </form>
-    </div>
+      <div class="password-row">
+  <label for="password">Wachtwoord</label>
+  <a href="wachtwoord.php"><b>Wachtwoord vergeten?</b></a>
 </div>
+
+      <input type="password" id="password" name="password" placeholder="Wachtwoord" required />
+
+      <button type="submit">Log in</button>
+
+<div class="signup-text">
+  Heb je nog geen account? <a href="accountmaken.php"><b>Meld je nu aan</b></a>
+</div>
+
+    </form>
+  </div>
+</div>
+
 </body>
 </html>
+
+
+
