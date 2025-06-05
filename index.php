@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TL reizen</title>
+    <title>TL reizen - Home</title>
     <link rel="stylesheet" href="css/style.css">
     <script>
         function toggleRetour() {
@@ -72,7 +72,7 @@
             <h1>Populaire bestemmingen</h1>
             <div class="bestemmingen-flex">
                 <?php
-                $sql = "SELECT locatie, titel, luchthaven, prijs, afbeelding FROM reizen LIMIT 8";
+                $sql = "SELECT id, locatie, titel, luchthaven, prijs, afbeelding FROM reizen LIMIT 8";
                 $result = $conn->query($sql);
 
                 $count = 0;
@@ -84,7 +84,7 @@
                         }
                 ?>
                         <div class="bestemmingen-container">
-                            <div class="bestemming">
+                            <a href="reis.php?id=<?php echo $row['id']; ?>" class="bestemming">
                                 <div class="banner">
                                     <img src="images/<?php echo htmlspecialchars($row['afbeelding']); ?>" alt="<?php echo htmlspecialchars($row['locatie']); ?>">
                                 </div>
@@ -95,7 +95,8 @@
                                     <p><?php echo htmlspecialchars($row['luchthaven']); ?></p>
                                 </div>
                                 <p class="prijs">Vanaf <span>€<?php echo htmlspecialchars($row['prijs']); ?></span></p>
-                            </div>
+                            </a>
+
                         </div>
                 <?php
                         $count++;
@@ -122,26 +123,26 @@
         <section class="voorbereiding">
             <h1>Bereid je reis voor</h1>
             <div class="bereid">
-                <div class="bereid-container">
+                <a href="inchecken.php" class="bereid-container">
                     <div class="foto"><img src="images/flight.png" alt="flight"></div>
                     <b>Online inchecken</b>
                     <p>Check online in voor je vlucht</p>
-                </div>
-                <div class="bereid-container">
+                </a>
+                <a href="mijn-boekingen.php" class="bereid-container">
                     <div class="foto"><img src="images/schedule.png" alt="schedule"></div>
                     <b>Beheer je boeking</b>
                     <p>Regel zelf alles voor je reis</p>
-                </div>
-                <div class="bereid-container">
-                    <div class="foto"><img src="images/bad.png" alt="bed"></div>
-                    <b>Hotels</b>
-                    <p>Boek je verblijf op booking.com</p>
-                </div>
-                <div class="bereid-container">
+                </a>
+                <a href="https://www.weer.nl/" class="bereid-container">
+                    <div class="foto"><img src="images/cloudy.png" alt="bed"></div>
+                    <b>Weer</b>
+                    <p>Bekijk snel het weer voor jou vakantie</p>
+                </a>
+                <a href="https://www.rentalcars.com/nl/" class="bereid-container">
                     <div class="foto"><img src="images/car.png" alt="car"></div>
                     <b>Huurauto</b>
-                    <p>Huur gemakkelijk een auto</p>
-                </div>
+                    <p>Huur gemakkelijk een auto bij rentalcars</p>
+                </a>
             </div>
         </section>
 
@@ -150,18 +151,30 @@
         <section class="reclame">
             <div class="linkerkant">
                 <h3>TL reizen app</h3>
-                <img src="images/appstoreplaystore.png" alt="appstore">
+                <?php
+                $userAgent = $_SERVER['HTTP_USER_AGENT'];
+                $appstoreUrl = "https://apps.apple.com/";
+                $playstoreUrl = "https://play.google.com/store";
+                $link = $playstoreUrl;
+
+                if (stripos($userAgent, 'iphone') !== false || stripos($userAgent, 'ipad') !== false || stripos($userAgent, 'ipod') !== false) {
+                    $link = $appstoreUrl;
+                }
+                ?>
+                <a href="<?php echo htmlspecialchars($link); ?>" target="_blank">
+                    <img src="images/appstoreplaystore.png" alt="appstore">
+                </a>
             </div>
             <div class="rechterkant">
                 <h3>Blijf op de hoogte</h3>
                 <p>volg ons op social media</p>
                 <div class="socials">
-                    <div class="social"><img src="images/x.png" alt="X"></div>
-                    <div class="social"><img src="images/facebook.png" alt="Facebook"></div>
-                    <div class="social"><img src="images/instagram.png" alt="Instagram"></div>
-                    <div class="social"><img src="images/whatsapp.png" alt="WhatsApp"></div>
-                    <div class="social"><img src="images/youtube.png" alt="YouTube"></div>
-                    <div class="social"><img src="images/linkedin.png" alt="LinkedIn"></div>
+                    <a href="https://x.com/TLreizen" class="social" target="_blank"><img src="images/x.png" alt="X"></a>
+                    <a href="https://facebook.com/TLreizen" class="social" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a href="https://instagram.com/TLreizen" class="social" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+                    <a href="https://wa.me/?text=Volg%20TLreizen%20op%20WhatsApp" class="social" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+                    <a href="https://youtube.com/@TLreizen" class="social" target="_blank"><img src="images/youtube.png" alt="YouTube"></a>
+                    <a href="https://linkedin.com/company/TLreizen" class="social" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
                 </div>
             </div>
         </section>
