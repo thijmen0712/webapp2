@@ -6,6 +6,7 @@
     <nav>
         <a href="index.php"><b>Home</b></a>
         <a href="boek.php"><b>Bestemmingen</b></a>
+        <a href="overons.php"><b>Over ons</b></a>
         <a href="Overons.php"><b>Over ons</b></a>
         <a href="contact.php"><b>Contact</b></a>
         <a href="testdesign.php"><b>design</b></a>
