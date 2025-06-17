@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TL reizen - Home</title>
@@ -52,6 +53,15 @@
                                 <input type="number" name="personen" min="1" max="10" placeholder="Aantal personen" required>
                             </div>
                             <div class="rechterveld">
+								<input type="date" name="vertrek" id="vertrek">
+								<input type="date" name="retour" class="retour-datum" style="display:none;" id="retour">
+
+								<script>
+								  const vandaag = new Date().toISOString().split('T')[0];
+								  document.getElementById('vertrek').value = vandaag;
+								  document.getElementById('retour').value = vandaag;
+								</script>
+
                                 <input type="date" name="vertrek">
                                 <input type="date" name="retour" class="retour-datum" style="display:none;">
                             </div>

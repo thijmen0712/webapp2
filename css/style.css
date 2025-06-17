@@ -712,3 +712,652 @@ overons .terug-knop {
     font-family: "MMRText", sans-serif;
     color: #444;
   }
+
+
+
+.admin-lijst {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+	margin-left: 20px;
+}
+
+.admin-lijst li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.bewerk-btn,
+.verwijder-btn {
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    color: white;
+}
+
+.bewerk-btn {
+    background-color: #007bff;
+}
+
+.bewerk-btn:hover {
+    background-color: #0056b3;
+}
+
+.verwijder-btn {
+    background-color: #dc3545;
+}
+
+.verwijder-btn:hover {
+    background-color: #a71d2a;
+}
+
+.admin-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #0071c2;
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+	margin-bottom: 20px;
+}
+
+.admin-button:hover {
+    background-color: #0071c2;
+}
+
+
+
+
+
+
+/* Wrapper voor het hele formulier */
+.form-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    overflow: hidden;
+}
+
+/* Container van het formulier */
+.form-container {
+    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    max-height: 80vh;
+    padding: 30px;
+    padding-bottom: 60px; /* extra ruimte onderin */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+	box-sizing: border-box;
+}
+
+/* Algemene form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels boven invoervelden */
+label {
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+/* Input en textarea velden */
+input, textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+}
+
+/* Submitknop */
+.loginsub button[type="submit"] {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.loginsub button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Terug-link onder formulier */
+a.admin-button {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+
+
+/* Center wrapper */
+.login-center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Card container */
+.login-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 360px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Labels */
+.login-form label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* Inputs */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Password row with label + forgot link */
+.password-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.password-row label {
+  margin: 0;
+}
+
+.password-row a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #2E8BC0;
+}
+
+.password-row a:hover {
+  text-decoration: underline;
+}
+
+/* Checkbox styling */
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+/* Login button */
+.login-form button {
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #2E8BC0;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #2372a4;
+}
+
+/* Sign up text */
+.signup-text {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.signup-text a {
+  color: #2E8BC0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+
+h2, h3 {
+    color: #005daa;
+}
+
+section.spoed-contact {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bold-label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+select#land-select {
+    padding: 8px;
+    margin-top: 8px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+}
+
+.spoed-kaart {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid #005daa;
+    border-radius: 8px;
+    background-color: #eef6fd;
+}
+
+.telefoon-link {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #005daa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tarief {
+    font-size: 14px;
+    color: #666;
+}
+
+.talenbox {
+    margin-top: 20px;
+}
+
+.talenbox p {
+    margin-bottom: 10px;
+}
+
+.taalrij {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-top: 1px solid #ccc;
+}
+
+.taalrij:first-of-type {
+    border-top: none;
+}
+.account-wrapper {
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.account-col {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.account-col h2,
+.account-col h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.account-col form {
+  margin-bottom: 30px;
+}
+
+.account-col label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.account-col input[type="text"],
+.account-col input[type="email"],
+.account-col input[type="password"],
+.account-col select,
+.account-col textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.account-col textarea {
+  resize: vertical;
+}
+
+.account-col button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #2980b9;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.account-col button:hover {
+  background-color: #1f6391;
+}
+
+.reizen-lijst {
+  margin-top: 20px;
+}
+
+.reizen-lijst ul {
+  list-style: none;
+  padding: 0;
+}
+
+.reizen-lijst li {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.reizen-lijst em {
+  color: #888;
+}
+
+@media (max-width: 800px) {
+  .account-wrapper {
+    flex-direction: column;
+  }
+}
+
+
+
+.infomatiereis {
+    display: flex;
+    gap: 2rem; /* ruimte tussen faciliteiten en recensies */
+    margin-bottom: 2rem;
+}
+
+.faciliteiten {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.recensies {
+    width: 50%;
+}
+
+
+
+
+.zoekpagina {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px 40px;
+}
+
+/* Sidebar */
+.filter-sidebar {
+    width: 260px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 90px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    height: auto;
+    flex-shrink: 0;
+}
+
+.filter-section {
+    margin-bottom: 24px;
+}
+
+.filter-section h3 {
+    font-size: 18px;
+    cursor: pointer;
+    color: #2E8BC0;
+    margin-bottom: 6px;
+}
+
+.filter-content {
+    display: none;
+}
+
+.filter-content.active {
+    display: block;
+}
+
+.filter-sidebar select,
+.filter-sidebar input[type="number"] {
+    width: 100%;
+    padding: 6px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.filter-sidebar button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2E8BC0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.filter-sidebar button:hover {
+    background-color: #1c5f8c;
+}
+
+
+.bestemming {
+    display: block;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
+    padding-bottom: 20px;
+}
+
+
+
+
+.boeken-wrapper {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    padding: 60px 0;
+}
+
+.boeken-wrapper .container {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.boeken-wrapper h1 {
+    text-align: center;
+    color: #2E8BC0;
+    margin-bottom: 25px;
+}
+
+.boeken-wrapper label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.boeken-wrapper input[type="date"],
+.boeken-wrapper input[type="number"],
+.boeken-wrapper input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.boeken-wrapper button {
+    display: block;
+    margin: 30px auto 0 auto;
+    background-color: #2E8BC0;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boeken-wrapper button:hover {
+    background-color: #226a93;
+}
+
+.boeken-wrapper .success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .knoppen {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+  .zoeken img {
+    height: 300px;
+    border-radius: 0 0 10px 10px;
+  }
+	
+  .middenveld input[type=number] {
+	width: 260px;
+  }
+	input[type="date"] {
+	  -webkit-appearance: none;
+	  appearance: none;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	background-color: white;
+		color: black;
+	}
+
+
+  .zoekbalk-container {
+    width: 75%;
+	  height: 80%
+  }
+
+  .zoekbalk {
+    padding: 15px;
+    height: auto;
+  }
+
+  .zoekformulier {
+    gap: 15px;
+  }
+
+    .velden {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bereid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .reclame {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .verblijf-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+
+    .bestemmingen-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+}
