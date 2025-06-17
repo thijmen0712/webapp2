@@ -1,8 +1,8 @@
 <?php
-$host = 'fdb1028.awardspace.net';
-$db   = '4637952_webapp2';
-$user = '4637952_webapp2';
-$pass = 'reisbureau12';
+$host = 'localhost:3306';
+$db   = 'h_00092f1b_webapp2';
+$user = 'h_00092f1b_thijmen';
+$pass = 'z54h7H%2f';
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
@@ -11,4 +11,3 @@ try {
     die("Connectie mislukt: " . $e->getMessage());
 }
 ?>
-<?php phpinfo(); ?>
