@@ -62,6 +62,8 @@
 								  document.getElementById('retour').value = vandaag;
 								</script>
 
+                                <input type="date" name="vertrek">
+                                <input type="date" name="retour" class="retour-datum" style="display:none;">
                             </div>
                         </div>
                         <div class="zoekknop">

@@ -593,6 +593,7 @@ overons .terug-knop {
 
 .recensies {
     background-color: #e4e4e4;
+    padding: 10px;
     box-sizing: border-box;
     border-radius: 20px;
     width: 250px;
@@ -711,9 +712,6 @@ overons .terug-knop {
     font-family: "MMRText", sans-serif;
     color: #444;
   }
-
-
-
 
 
 
@@ -1363,4 +1361,3 @@ select#land-select {
         align-items: center;
     }
 }
-
