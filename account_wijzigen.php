@@ -9,16 +9,18 @@ if (!isset($_SESSION['user_id'])) {
 
 $id = $_SESSION['user_id'];
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $naam  = trim($_POST['naam']  ?? '');
-    $email = trim($_POST['email'] ?? '');
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    if ($naam === '' || $email === '') {
+    $naam = $_POST['naam'];
+    $email = $_POST['email'];
+
+    if ($naam == '' || $email == '') {
         header('Location: account.php?fout=leeg');
         exit();
     }
 
-    $stmt = $conn->prepare('SELECT id FROM users WHERE email = ? AND id <> ?');
+    $sql = "SELECT id FROM users WHERE email = ? AND id != ?";
+    $stmt = $conn->prepare($sql);
     $stmt->execute([$email, $id]);
 
     if ($stmt->rowCount() > 0) {
@@ -26,7 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    $stmt = $conn->prepare('UPDATE users SET naam = ?, email = ? WHERE id = ?');
+    $sql = "UPDATE users SET naam = ?, email = ? WHERE id = ?";
+    $stmt = $conn->prepare($sql);
     $stmt->execute([$naam, $email, $id]);
 
     header('Location: account.php?ok=1');
