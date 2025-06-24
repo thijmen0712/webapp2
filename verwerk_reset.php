@@ -2,33 +2,28 @@
 session_start();
 include 'connect.php';
 
-if (!isset($_SESSION['reset_email'], $_SESSION['reset_code'])) {
-    header('Location: wachtwoord_vergeten.php');
-    exit();
-}
-
-$error = '';
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $code = $_POST['code'] ?? '';
     $nieuw = $_POST['nieuw_wachtwoord'] ?? '';
     $herhaal = $_POST['herhaal_wachtwoord'] ?? '';
 
-    if ($code !== strval($_SESSION['reset_code'])) {
-        $error = "Verificatiecode is onjuist.";
-    } elseif ($nieuw !== $herhaal) {
-        $error = "Wachtwoorden komen niet overeen.";
-    } else {
-        $nieuwHash = password_hash($nieuw, PASSWORD_DEFAULT);
-
-        $stmt = $conn->prepare("UPDATE users SET wachtwoord = ? WHERE email = ?");
-        $stmt->execute([$nieuwHash, $_SESSION['reset_email']]);
-
-        unset($_SESSION['reset_code'], $_SESSION['reset_email']);
-
-        header('Location: inloggen.php?message=wachtwoord_gewijzigd');
-        exit();
+    if (!isset($_SESSION['reset_code'], $_SESSION['reset_email'])) {
+        exit("Geen code, probeer opnieuw.");
     }
+    if ($code != $_SESSION['reset_code']) {
+        exit("Code klopt niet.");
+    }
+    if ($nieuw != $herhaal) {
+        exit("Wachtwoorden zijn niet hetzelfde.");
+    }
+
+    $hash = password_hash($nieuw, PASSWORD_DEFAULT);
+    $stmt = $conn->prepare("UPDATE users SET wachtwoord = ? WHERE email = ?");
+    $stmt->execute([$hash, $_SESSION['reset_email']]);
+
+    unset($_SESSION['reset_code'], $_SESSION['reset_email']);
+
+    exit("Wachtwoord is veranderd. <a href='inloggen.php'>Inloggen</a>");
 }
 ?>
 
