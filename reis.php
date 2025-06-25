@@ -29,6 +29,7 @@ $recensies = $stmtRec->fetchAll(PDO::FETCH_ASSOC);
 
 <!DOCTYPE html>
 <html lang="nl">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,17 +37,51 @@ $recensies = $stmtRec->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+=======
+
+<head>
+    <meta charset="UTF-8">
+    <title><?php echo htmlspecialchars($reis['titel']); ?></title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .infomatiereis {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .faciliteiten {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        .recensies {
+            width: 50%;
+        }
+		.recensie-naam div:nth-child(3) {
+			color: black;
+		}
+
+    </style>
+</head>
+>>>>>>> 5be3ea15551f01c3665335605ae5d5f747d1019d
 <body>
 
 	<?php include 'header.php'; ?>
 	
+<<<<<<< HEAD
 	<a href="javascript:history.back()" class="terug-knop">Terug</a>
 
+=======
+	
+>>>>>>> 5be3ea15551f01c3665335605ae5d5f747d1019d
 <div class="pagina-container">
 
     <div class="header">
         <h1><?php echo htmlspecialchars($reis['titel']); ?></h1>
         <p><?php echo htmlspecialchars($reis['locatie']); ?> – 
+<<<<<<< HEAD
             <a href="<?php echo $reis['locatie_link']; ?>" target="_blank" class="toon-op-kaart">Toon op kaart</a>
         </p>
     </div>
@@ -55,6 +90,12 @@ $recensies = $stmtRec->fetchAll(PDO::FETCH_ASSOC);
 
 
 
+=======
+            <a href="<?php echo $reis['locatie_link']; ?>" target="_blank">Toon op kaart</a>
+        </p>
+    </div>
+
+>>>>>>> 5be3ea15551f01c3665335605ae5d5f747d1019d
 <div class="foto-grid">
     <?php if (!empty($reis['afbeelding'])): ?>
         <img src="images/<?php echo $reis['afbeelding']; ?>">
@@ -78,6 +119,30 @@ $recensies = $stmtRec->fetchAll(PDO::FETCH_ASSOC);
 
         <div class="infomatiereis">
             <div class="faciliteiten">
+<<<<<<< HEAD
+=======
+</head>
+
+<body>
+
+    <div class="pagina-container">
+
+        <div class="header">
+            <h1><?php echo htmlspecialchars($reis['titel']); ?></h1>
+            <p><?php echo htmlspecialchars($reis['locatie']); ?> – <a href="<?php echo $reis['locatie_link']; ?>" target="_blank">Toon op kaart</a></p>
+        </div>
+
+        <div class="foto-grid">
+            <img src="images/<?php echo $reis['afbeelding']; ?>">
+            <img src="images/<?php echo $reis['afbeelding2']; ?>">
+            <img src="images/<?php echo $reis['afbeelding3']; ?>">
+            <img src="images/<?php echo $reis['afbeelding4']; ?>">
+            <img src="images/<?php echo $reis['afbeelding5']; ?>">
+        </div>
+
+        <div class="info-blokken">
+            <div class="kenmerken">
+>>>>>>> 5be3ea15551f01c3665335605ae5d5f747d1019d
                 <?php if ($reis['ontbijt']) echo '<div>🍽️ All inclusive</div>'; ?>
                 <?php if ($reis['wifi']) echo '<div>📶 Gratis WiFi</div>'; ?>
                 <?php if ($reis['zwembad']) echo '<div>🏊‍♂️ Binnenzwembad</div>'; ?>
@@ -118,6 +183,52 @@ $recensies = $stmtRec->fetchAll(PDO::FETCH_ASSOC);
         <div class="beschrijving">
             <h2>Beschrijving</h2>
             <p><?php echo nl2br(htmlspecialchars($reis['beschrijving_lang'])); ?></p>
+<<<<<<< HEAD
+=======
+                <div class="recensies">
+                    <h3>Recensies</h3>
+
+                    <?php
+                    $sqlRec = "SELECT r.beoordeling, r.tekst, r.datum, u.naam 
+               FROM recensies r 
+               JOIN users u ON r.user_id = u.id 
+               WHERE r.reis_id = :reis_id AND r.goedgekeurd = 1 
+               ORDER BY r.datum DESC";
+                    $stmtRec = $conn->prepare($sqlRec);
+                    $stmtRec->execute(['reis_id' => $reis['id']]);
+                    $recensies = $stmtRec->fetchAll(PDO::FETCH_ASSOC);
+
+                    echo "<div class='recensies'>";
+                    if (!$recensies) {
+                        echo "<p>Er zijn nog geen recensies.</p>";
+                    } else {
+                        foreach ($recensies as $recensie) {
+                            $letter = strtoupper(substr($recensie['naam'], 0, 1));
+                            echo "<div class='recensie'>";
+                            echo "<div class='recensie-naam'>";
+                            echo "<div  class='profiel'>" 
+                                . $letter . "</div>";
+                            echo "<div>";
+                            echo "<div>" . htmlspecialchars($recensie['naam']) . "</div>";
+                            echo "<div>" . htmlspecialchars($recensie['datum']) . "</div>";
+                            echo "</div>";
+                            echo "</div>";
+                            echo "<p>" . nl2br(htmlspecialchars($recensie['tekst'])) . "</p>";
+                            echo "</div>";
+                        }
+                    }
+                    ?>
+                </div>
+
+            </div>
+
+
+
+            <div class="beschrijving">
+                <h2>Beschrijving</h2>
+                <p><?php echo nl2br(htmlspecialchars($reis['beschrijving_lang'])); ?></p>
+            </div>
+>>>>>>> 5be3ea15551f01c3665335605ae5d5f747d1019d
         </div>
     </div>
 
@@ -130,3 +241,14 @@ $recensies = $stmtRec->fetchAll(PDO::FETCH_ASSOC);
 
 </body>
 </html>
+<<<<<<< HEAD
+=======
+        <a href="boeken.php?reis=<?php echo $reis['id']; ?>" class="boek-knop">Boek nu</a>
+    </div>
+
+    </div>
+
+</body>
+
+</html>
+>>>>>>> 5be3ea15551f01c3665335605ae5d5f747d1019d
