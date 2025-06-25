@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<?php
-include 'header.php';
-?>
+<?php include 'header.php'; ?>
 <div class="login-center-wrapper">
     <div class="login-container">
         <h2>Log in of maak een account aan</h2>
@@ -20,6 +18,9 @@ include 'header.php';
         </ul>
 
         <form class="login-form" method="post" action="verwerk_account.php">
+            <label for="naam">Naam</label>
+            <input type="text" id="naam" name="naam" placeholder="Naam" required>
+
             <label for="email">E-mailadres</label>
             <input type="email" id="email" name="email" placeholder="E-mailadres" required>
 

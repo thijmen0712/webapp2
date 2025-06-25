@@ -9,7 +9,8 @@
     src: url("fonts/Nexa-Heavy.ttf") format("truetype");
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -167,7 +168,7 @@ nav a:hover::after {
 
 .linkerveld input,
 .rechterveld input,
-.middenveld select {
+.middenveld input[type="number"] {
     width: 100%;
     max-width: 100%;
 }
@@ -179,22 +180,6 @@ nav a:hover::after {
     border-radius: 10px;
     border: 1px solid #ccc;
     font-family: "MMRText", sans-serif;
-}
-
-.linkerveld input:first-child {
-    border-radius: 10px 0 0 10px;
-}
-
-.linkerveld input:last-child {
-    border-radius: 0 10px 10px 0;
-}
-
-.rechterveld input:first-child {
-    border-radius: 10px 0 0 10px;
-}
-
-.rechterveld input:last-child {
-    border-radius: 0 10px 10px 0;
 }
 
 .zoekknop {
@@ -237,8 +222,7 @@ nav a:hover::after {
 h1 {
     color: #2E8BC0;
     font-size: 30px;
-    text-align: start;
-    margin-left: 160px;
+    text-align: center;
 }
 
 h2 {
@@ -246,6 +230,8 @@ h2 {
     font-size: 30px;
     text-align: start;
 }
+
+
 
 .bestemmingen-flex {
     display: flex;
@@ -270,6 +256,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-decoration: none;
 }
 
 .banner {
@@ -279,6 +266,7 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
 .banner img {
     width: 100%;
     height: 100%;
@@ -294,7 +282,13 @@ h2 {
 
 .bestemming b {
     margin: 5px 0 0 10px;
+    color: black;
     font-size: 14px;
+}
+.bestemming p {
+    font-size: 14px;
+    color: #444444;
+    margin: 5px 10px 0 10px;
 }
 
 .bestemming-info {
@@ -328,15 +322,18 @@ h2 {
     color: #2E8BC0;
     font-size: 20px;
 }
+
 .disclamer {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
+
 .disclamer p {
     font-family: "nexa", sans-serif;
     max-width: 900px;
 }
+
 .i {
     width: 40px;
     height: 40px;
@@ -352,6 +349,7 @@ h2 {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     margin-top: 17px;
 }
+
 .bereid {
     display: flex;
     justify-content: center;
@@ -359,6 +357,7 @@ h2 {
     gap: 65px;
     margin-top: 40px;
 }
+
 .bereid-container {
     display: flex;
     flex-direction: column;
@@ -371,7 +370,9 @@ h2 {
     background-color: #F5F5F5;
     padding: 20px;
     box-sizing: border-box;
+    text-decoration: none;
 }
+
 .foto {
     width: 100px;
     height: 100px;
@@ -381,26 +382,31 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
 .foto img {
     width: 70px;
     height: 70px;
 
 }
+
 .bereid-container b {
     font-size: 20px;
     color: black;
     margin: 0;
 }
+
 .bereid-container p {
     font-size: 14px;
     color: #444444;
 }
+
 .line {
     width: 1200px;
     height: 1px;
     background-color: #C4C4C4;
     margin: 40px auto;
 }
+
 .linkerkant img {
     width: 200px;
 }
@@ -449,7 +455,7 @@ h2 {
     max-width: 40px;
     max-height: 40px;
     background-color: #2E8BC0;
-    border-radius: 40%;
+    border-radius: 50%;
     padding: 10px;
 }
 
@@ -471,8 +477,993 @@ footer {
     color: white;
     border-top: 1px solid #C4C4C4;
 }
+
 footer a {
     color: black;
     text-decoration: none;
     margin: 20px;
+}
+
+overons .terug-knop {
+    background-color: #2E8BC0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 9px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10%;
+}
+
+.terug-knop:hover {
+    background-color: white;
+    color: #2E8BC0;
+    border: 1px solid #2E8BC0;
+}
+
+
+
+
+.verblijf-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+
+
+.pagina-container {
+    max-width: 1200px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: #0077c8;
+    margin-bottom: 20px;
+}
+
+.foto-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    gap: 10px;
+}
+
+
+.foto-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.kenmerken {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.beschrijving {
+    flex: 2;
+    max-width: 700px;
+}
+
+.prijs-boek {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.prijs-boek p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.boek-knop {
+    background-color: #0077c8;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.boek-knop:hover {
+    background-color: #005fa3;
+}
+
+.recensies {
+    background-color: #e4e4e4;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 250px;
+}
+.profiel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C4C4C4;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+.recensie-naam {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.verblijf-links {
+    flex: 3;
+    min-width: 300px;
+}
+
+.verblijf-rechts {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.verblijf-titel {
+    font-size: 28px;
+    color: #2E8BC0;
+    margin-bottom: 10px;
+}
+
+.verblijf-adres {
+    font-family: "MMRText", sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.verblijf-adres .blauw {
+    color: #0071c2;
+    cursor: pointer;
+}
+
+.hoofdfoto {
+    background-color: #ccc;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.fotoblok {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.fotoblok .foto {
+    flex: 1 1 calc(33.33% - 10px);
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "MMRText", sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.reserveerknop {
+    background-color: #0071c2;
+    color: white;
+    font-size: 16px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-family: "MMRText", sans-serif;
+}
+
+.recensieblok {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "MMRText", sans-serif;
+    color: #333;
+}
+
+.score-blauw {
+    background-color: #003580;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.map-vlak {
+    background-color: #ccc;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: "MMRText", sans-serif;
+    color: #444;
+  }
+
+
+
+
+
+
+.admin-lijst {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+	margin-left: 20px;
+}
+
+.admin-lijst li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.bewerk-btn,
+.verwijder-btn {
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    color: white;
+}
+
+.bewerk-btn {
+    background-color: #007bff;
+}
+
+.bewerk-btn:hover {
+    background-color: #0056b3;
+}
+
+.verwijder-btn {
+    background-color: #dc3545;
+}
+
+.verwijder-btn:hover {
+    background-color: #a71d2a;
+}
+
+.admin-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #0071c2;
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+	margin-bottom: 20px;
+}
+
+.admin-button:hover {
+    background-color: #0071c2;
+}
+
+
+
+
+
+
+/* Wrapper voor het hele formulier */
+.form-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    overflow: hidden;
+}
+
+/* Container van het formulier */
+.form-container {
+    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    max-height: 80vh;
+    padding: 30px;
+    padding-bottom: 60px; /* extra ruimte onderin */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+	box-sizing: border-box;
+}
+
+/* Algemene form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels boven invoervelden */
+label {
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+/* Input en textarea velden */
+input, textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+}
+
+/* Submitknop */
+.loginsub button[type="submit"] {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.loginsub button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Terug-link onder formulier */
+a.admin-button {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+
+
+/* Center wrapper */
+.login-center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Card container */
+.login-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 360px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Labels */
+.login-form label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* Inputs */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Password row with label + forgot link */
+.password-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.password-row label {
+  margin: 0;
+}
+
+.password-row a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #2E8BC0;
+}
+
+.password-row a:hover {
+  text-decoration: underline;
+}
+
+/* Checkbox styling */
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+/* Login button */
+.login-form button {
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #2E8BC0;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #2372a4;
+}
+
+/* Sign up text */
+.signup-text {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.signup-text a {
+  color: #2E8BC0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+
+h2, h3 {
+    color: #005daa;
+}
+
+section.spoed-contact {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bold-label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+select#land-select {
+    padding: 8px;
+    margin-top: 8px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+}
+
+.spoed-kaart {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid #005daa;
+    border-radius: 8px;
+    background-color: #eef6fd;
+}
+
+.telefoon-link {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #005daa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tarief {
+    font-size: 14px;
+    color: #666;
+}
+
+.talenbox {
+    margin-top: 20px;
+}
+
+.talenbox p {
+    margin-bottom: 10px;
+}
+
+.taalrij {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-top: 1px solid #ccc;
+}
+
+.taalrij:first-of-type {
+    border-top: none;
+}
+.account-wrapper {
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.account-col {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.account-col h2,
+.account-col h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.account-col form {
+  margin-bottom: 30px;
+}
+
+.account-col label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.account-col input[type="text"],
+.account-col input[type="email"],
+.account-col input[type="password"],
+.account-col select,
+.account-col textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.account-col textarea {
+  resize: vertical;
+}
+
+.account-col button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #2980b9;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.account-col button:hover {
+  background-color: #1f6391;
+}
+
+.reizen-lijst {
+  margin-top: 20px;
+}
+
+.reizen-lijst ul {
+  list-style: none;
+  padding: 0;
+}
+
+.reizen-lijst li {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.reizen-lijst em {
+  color: #888;
+}
+
+@media (max-width: 800px) {
+  .account-wrapper {
+    flex-direction: column;
+  }
+}
+
+
+
+.infomatiereis {
+    display: flex;
+    gap: 2rem; /* ruimte tussen faciliteiten en recensies */
+    margin-bottom: 2rem;
+}
+
+.faciliteiten {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.recensies {
+    width: 50%;
+}
+
+
+
+
+.zoekpagina {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px 40px;
+}
+
+/* Sidebar */
+.filter-sidebar {
+    width: 260px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 90px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    height: auto;
+    flex-shrink: 0;
+}
+
+.filter-section {
+    margin-bottom: 24px;
+}
+
+.filter-section h3 {
+    font-size: 18px;
+    cursor: pointer;
+    color: #2E8BC0;
+    margin-bottom: 6px;
+}
+
+.filter-content {
+    display: none;
+}
+
+.filter-content.active {
+    display: block;
+}
+
+.filter-sidebar select,
+.filter-sidebar input[type="number"] {
+    width: 100%;
+    padding: 6px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.filter-sidebar button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2E8BC0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.filter-sidebar button:hover {
+    background-color: #1c5f8c;
+}
+
+
+.bestemming {
+    display: block;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
+    padding-bottom: 20px;
+}
+
+
+
+
+.boeken-wrapper {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    padding: 60px 0;
+}
+
+.boeken-wrapper .container {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.boeken-wrapper h1 {
+    text-align: center;
+    color: #2E8BC0;
+    margin-bottom: 25px;
+}
+
+.boeken-wrapper label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.boeken-wrapper input[type="date"],
+.boeken-wrapper input[type="number"],
+.boeken-wrapper input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.boeken-wrapper button {
+    display: block;
+    margin: 30px auto 0 auto;
+    background-color: #2E8BC0;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boeken-wrapper button:hover {
+    background-color: #226a93;
+}
+
+.boeken-wrapper .success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+
+        .infomatiereis {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .faciliteiten {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        .recensies {
+            width: 50%;
+        }
+		.recensie-naam div:nth-child(3) {
+			color: black;
+		}
+		        .terug-knop {
+            display: inline-block;
+            margin: 2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #2E8BC0;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+			width: 100px;
+			text-align: center;
+        }
+
+        .terug-knop:hover {
+            background-color: white;
+			border: 1px solid #2E8BC0;
+        }
+
+		a.toon-op-kaart {
+		  display: inline-block;
+		  margin-top: 5px;
+		  padding: 6px 12px;
+		  background-color: #2E8BC0;
+		  color: white;
+		  text-decoration: none;
+		  border-radius: 5px;
+		  font-size: 0.9rem;
+		}
+
+		a.toon-op-kaart:hover {
+		  background-color: white;
+		  color: #2E8BC0;
+		  border: 1px solid #2E8BC0;
+		}
+
+
+
+@media (max-width: 768px) {
+    .infomatiereis {
+        flex-direction: column;
+    }
+
+    .faciliteiten,
+    .recensies {
+        width: 100%;
+    }
+
+    .foto-grid img {
+        width: 100%;
+        height: auto;
+    }
+
+    .terug-knop {
+        width: auto;
+        margin: 1rem;
+        text-align: center;
+    }
+
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+	
+  .foto-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .knoppen {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+  .zoeken img {
+    height: 300px;
+    border-radius: 0 0 10px 10px;
+  }
+	
+  .middenveld input[type=number] {
+	width: 260px;
+  }
+	input[type="date"] {
+	  -webkit-appearance: none;
+	  appearance: none;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	background-color: white;
+		color: black;
+	}
+
+
+  .zoekbalk-container {
+    width: 75%;
+	  height: 80%
+  }
+
+  .zoekbalk {
+    padding: 15px;
+    height: auto;
+  }
+
+  .zoekformulier {
+    gap: 15px;
+  }
+
+    .velden {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bereid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .reclame {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .verblijf-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+
+    .bestemmingen-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+.recensie-lijst {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.recensie {
+    margin-bottom: 30px;
+    padding: 10px 0;
+}
+
+.recensie button {
+    width: 200px;
+    height: 30px;
+    background-color: #2E8BC0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.recensie button:hover {
+    background-color: #1d5e88;
 }
