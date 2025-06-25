@@ -2,11 +2,38 @@
 session_start();
 include 'connect.php';
 
+<<<<<<< HEAD
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+=======
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+>>>>>>> 5be3ea15551f01c3665335605ae5d5f747d1019d
     $code = $_POST['code'] ?? '';
     $nieuw = $_POST['nieuw_wachtwoord'] ?? '';
     $herhaal = $_POST['herhaal_wachtwoord'] ?? '';
 
+<<<<<<< HEAD
+    if (!isset($_SESSION['reset_code'], $_SESSION['reset_email'])) {
+        exit("Geen code, probeer opnieuw.");
+    }
+    if ($code != $_SESSION['reset_code']) {
+        exit("Code klopt niet.");
+    }
+    if ($nieuw != $herhaal) {
+        exit("Wachtwoorden zijn niet hetzelfde.");
+    }
+
+    $hash = password_hash($nieuw, PASSWORD_DEFAULT);
+    $stmt = $conn->prepare("UPDATE users SET wachtwoord = ? WHERE email = ?");
+    $stmt->execute([$hash, $_SESSION['reset_email']]);
+
+    unset($_SESSION['reset_code'], $_SESSION['reset_email']);
+
+    exit("Wachtwoord is veranderd. <a href='inloggen.php'>Inloggen</a>");
+}
+?>
+
+
+=======
     if (!isset($_SESSION['reset_code']) || !isset($_SESSION['reset_email'])) {
         echo "Geen reset code gevonden. Begin opnieuw.";
         exit;
@@ -35,6 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
+>>>>>>> 5be3ea15551f01c3665335605ae5d5f747d1019d
 <?php
 include 'header.php';
 ?>

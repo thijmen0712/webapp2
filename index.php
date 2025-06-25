@@ -62,8 +62,11 @@
 								  document.getElementById('retour').value = vandaag;
 								</script>
 
+<<<<<<< HEAD
+=======
                                 <input type="date" name="vertrek">
                                 <input type="date" name="retour" class="retour-datum" style="display:none;">
+>>>>>>> 5be3ea15551f01c3665335605ae5d5f747d1019d
                             </div>
                         </div>
                         <div class="zoekknop">
@@ -138,7 +141,11 @@
                     <b>Online inchecken</b>
                     <p>Check online in voor je vlucht</p>
                 </a>
+<<<<<<< HEAD
+                <a href="account.php" class="bereid-container">
+=======
                 <a href="mijn-boekingen.php" class="bereid-container">
+>>>>>>> 5be3ea15551f01c3665335605ae5d5f747d1019d
                     <div class="foto"><img src="images/schedule.png" alt="schedule"></div>
                     <b>Beheer je boeking</b>
                     <p>Regel zelf alles voor je reis</p>

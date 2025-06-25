@@ -30,7 +30,11 @@ if ($stmt->rowCount() === 0) {
 // insert recensie
 $stmt = $conn->prepare("
     INSERT INTO recensies (user_id, reis_id, beoordeling, tekst, goedgekeurd, datum)
+<<<<<<< HEAD
+    VALUES (?, ?, ?, ?, 0, NOW())
+=======
     VALUES (?, ?, ?, ?, 1, NOW())
+>>>>>>> 5be3ea15551f01c3665335605ae5d5f747d1019d
 ");
 
 $stmt->execute([$user_id, $reis_id, $beoordeling, $tekst]);

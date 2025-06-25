@@ -37,6 +37,7 @@ if (!$user || $user['rol'] !== 'admin') {
         <a href="bewerk-lijst.php" class="admin-button">✏️ Reis bewerken</a>
         <a href="verwijder-lijst.php" class="admin-button">🗑️ Reis verwijderen</a>
         <a href="reserveringen.php" class="admin-button">📄 Reserveringen bekijken</a>
+		<a href="recenties-beheer.php" class="admin-button">📄 recenties beheren</a>
     </div>
 </div>
 

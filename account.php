@@ -138,3 +138,6 @@ $reizen = $stmt->fetchAll();
         </div>
     </div>
 </body>
+
+</html>
+</body
