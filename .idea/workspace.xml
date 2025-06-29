@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e67b5b8-be82-44b4-b9f4-f1ad58193f73" name="Changes" comment="overons pagina gemaakt" />
+    <list default="true" id="4e67b5b8-be82-44b4-b9f4-f1ad58193f73" name="Changes" comment="recenties beheer gemaakt en de zoek functie op datum gemaakt.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recenties-beheer.php" beforeDir="false" afterPath="$PROJECT_DIR$/recenties-beheer.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="overons" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,7 +40,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/thijmen0712/html.git&quot;,
-    &quot;accountId&quot;: &quot;776dd23d-1148-48d3-a53f-f6697fbcf904&quot;
+    &quot;accountId&quot;: &quot;7096710a-435f-4b04-ae0e-0b830d85c1db&quot;
   },
   &quot;recentNewPullRequestHead&quot;: {
     &quot;server&quot;: {
@@ -63,9 +66,9 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "overons",
+    "git-widget-placeholder": "herkansing",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/thijm/OneDrive - ROC Nijmegen/Bureaublad/webapp2/html",
+    "last_opened_file_path": "C:/school jaar 2024/website/pink goose/webapp2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -108,6 +111,8 @@
       <workItem from="1748262689663" duration="2394000" />
       <workItem from="1748335700741" duration="1296000" />
       <workItem from="1748426956185" duration="597000" />
+      <workItem from="1750926600811" duration="3896000" />
+      <workItem from="1751226618899" duration="3903000" />
     </task>
     <task id="LOCAL-00001" summary="een snelle test">
       <option name="closed" value="true" />
@@ -149,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748267958601</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="recenties beheer gemaakt en de zoek functie op datum gemaakt.">
+      <option name="closed" value="true" />
+      <created>1751230928760</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1751230928760</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +195,7 @@
     <MESSAGE value="een snelle test" />
     <MESSAGE value="index pagina afgemakt" />
     <MESSAGE value="overons pagina gemaakt" />
-    <option name="LAST_COMMIT_MESSAGE" value="overons pagina gemaakt" />
+    <MESSAGE value="recenties beheer gemaakt en de zoek functie op datum gemaakt." />
+    <option name="LAST_COMMIT_MESSAGE" value="recenties beheer gemaakt en de zoek functie op datum gemaakt." />
   </component>
 </project>
