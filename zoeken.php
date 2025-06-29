@@ -35,7 +35,7 @@ if (!empty($actieveBestemmingen)) {
     }
 }
 
-// De beschikbaarheid controleren op vertrek en retourdatum's
+// De beschikbaarheid controleren op vertrek en retourdatum
 if (!empty($startDatum) && !empty($eindDatum)) {
     $sql .= " AND id NOT IN (
         SELECT reis_id

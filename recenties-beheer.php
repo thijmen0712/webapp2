@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// hiermee toon je de recenties die eig nog niet goedgekeurd zijn
+// hiermee toont die de recenties die eig nog niet goedgekeurd zijn
 $stmt = $conn->query("
     SELECT r.id, r.beoordeling, r.tekst, r.datum, r.goedgekeurd, u.naam 
     FROM recensies r
